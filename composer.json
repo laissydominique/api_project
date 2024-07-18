@@ -1,0 +1,11 @@
+{
+    "require": {
+      "doctrine/orm": "^3",
+      "doctrine/dbal": "^4",
+      "symfony/cache": "^7"
+    },
+    "autoload": {
+      "psr-4": {"Alura\\Doctrine\\": "src/"}
+    }
+   }
+   

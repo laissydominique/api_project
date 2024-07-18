@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: sans-serif;
+
+}
+
+
+body{
+    background-color:#b26ced ;
+    
+}
+
+ .container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.saudacao{
+    text-align: center;
+    margin-top: 80px;
+    color: white;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 37px;
+
+}
+
+h2{
+    margin-top: 20px;
+} 
+
+form{
+    background-color: rgba(255, 255, 255, 0.167);
+    border: 1px solid, rgba(0, 0, 0, 0.485);
+    border-radius: 10px;
+    width: 600px;
+    display: grid;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.inputs{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ input[type="text"] {
+    width: 100%;
+    max-width: 630px; 
+    padding: 10px;
+    border-radius: 7px;
+}
+
+label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input{
+    display: grid;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+table{
+    margin-top: 100px;
+}
+
+.tamanho, .preco, .descricao, .produto{
+    margin-top: 20px;
+    padding: 20px;
+} 
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+button{
+background-color: #7535c9;
+border-radius: 15px;
+border: 1px solid black;
+color: white;
+width: 100px;
+height: 30px;
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+.tabela-de-produtos {
+    border-radius: 17px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.tabela-de-produtos table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #9757db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-de-produtos th, .tabela-de-produtos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.tabela-de-produtos th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+}
+
+.tabela-de-produtos td {
+    color: #ffff;
+    justify-content: left;
+    font-weight: bold;
+
+}
+
+.tabela-de-produtos td a {
+
+    color: black;
+    text-decoration: none;
+}
+
+.tabela-de-produtos td a:hover {
+    text-decoration: underline;
+}
+
