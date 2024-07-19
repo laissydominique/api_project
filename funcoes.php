@@ -1,5 +1,6 @@
 <?php
 
+require "Produto.php";
 
 function todosOsProdutos(\PDO $pdo): array
 {
@@ -36,8 +37,8 @@ function excluirProduto(\PDO $pdo, $idProduto): void
 function editarProduto(\PDO $pdo, $idProduto) {
     
  
-    $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?  WHERE id_produto = ?";
+    $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?, imagem = ? WHERE id_produto = ?";
     $stmt = $pdo->prepare($sql);
     return
-    $stmt->execute([$idProduto->getProduto(), $idProduto->getPreco(), $idProduto->getDescricao(),  $idProduto->getTamanho(), $idProduto->id]);
+    $stmt->execute([$idProduto->getProduto(), $idProduto->getPreco(), $idProduto->getDescricao(),  $idProduto->getTamanho(), $idProduto->getImagem(), $idProduto->id]);
 }

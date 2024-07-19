@@ -17,7 +17,6 @@ $produto = new Produto(
     $novoProduto['preco'],
     $novoProduto['descricao'],
     $novoProduto['tamanho'],
-
 );
 
 adicionarNovoProduto($pdo, $produto);

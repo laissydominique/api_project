@@ -47,14 +47,16 @@ $produtos = todosOsProdutos($pdo);
                     <label for="tamanho">Tamanho</label>
                     <input type="text" name="tamanho" id="tamanho" placeholder="Informe o tamamho" required>
                 </div>
-        <div class="btn">
-        <button>Salvar</button>
-            </div>
+                <!-- 
+                <div class="imagem">
+                <input type="file" name="imagem" accept="image/*" required>
+
+                </div> -->
+                <div class="btn">
+                    <button>Salvar</button>
+                </div>
             </form>
         </div>
-
-
-
 
         <div class="tabela-de-produtos">
             <table>
@@ -63,9 +65,11 @@ $produtos = todosOsProdutos($pdo);
                         <th class="feito">Produto</th>
                         <th class="tarefa">Valor de venda</th>
                         <th class="descricao">Descrição</th>
-                        <th class="tamanho">Descrição</th>
-                        <th class="eliminar">Eliminar</th>
+                        <th class="tamanho">Tamanho</th>
+                        <!-- <th class="imagem">Descrição</th> -->
                         <th class="editar">Editar</th>
+                        <th class="eliminar">Eliminar</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -83,8 +87,12 @@ $produtos = todosOsProdutos($pdo);
                             <td>
                                 <p class="tamanho"> <?= $produto->tamanho ?> </p>
                             </td>
+                            <!-- <td>
+                                <p class="imagem"> <?= $produto->imagem ?> </p>
+                            </td> -->
+                            <td><a  >Editar</a></td>
+
                             <td><a href="excluir-produto.php?id=<?= $produto->id ?>">Excluir</a></td>
-                            <!-- <td><a href="editar-produto.php?id=" >Editar</a></td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

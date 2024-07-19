@@ -1,0 +1,111 @@
+/* Estilo global para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #a279ee;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilo para elementos span */
+span {
+    color: #5a0095;
+}
+
+.saudacao {
+    margin-top: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.frase {
+    font-size: 25px;
+    margin: 0;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    margin: 100px 0 20px 0; 
+    justify-content: center;
+}
+
+.produto {
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.item {
+    width: 200px;
+    border: 1px solid transparent; 
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+}
+
+
+.item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /
+}
+
+
+.preco {
+    font-weight: bold;
+    font-size: 22px;
+    color: #28a745; 
+}
+
+
+.preco, .descricao, .tamanho {
+    margin-top: 10px; 
+    margin-left: 0; 
+    font-size: 18px;
+    color: #333; 
+}

@@ -1,0 +1,14 @@
+composer.lock
+composer.phar
+
+vendor/
+
+*.log
+
+*.tmp
+
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+cache/

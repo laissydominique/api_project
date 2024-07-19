@@ -8,14 +8,17 @@ class Produto
     public $preco;
     public $descricao;
     public $tamanho;
+    // public $imagem;
 
 
-    public function __construct($produto, $preco, $descricao, $tamanho)
+    public function __construct($produto, $preco, $descricao, $tamanho, )
     {
         $this->produto = $produto;
         $this->preco = $preco;
         $this->descricao = $descricao;
         $this->tamanho = $tamanho;
+        // $this->imagem = $imagem;
+
     }
 
     public function getProduto()
@@ -36,4 +39,9 @@ class Produto
     {
         return $this->tamanho;
     }
+
+    // public function getImagem()
+    // {
+    //     return $this->imagem;
+    // }
 }
