@@ -1,33 +1,26 @@
-<!-- <?php
+ <?php
 
-// require_once 'vendor/autoload.php';
-// require 'funcoes.php';
-// require "conexao-bd.php"; 
-// require "Produto.php"; 
+require_once 'vendor/autoload.php';
+require 'funcoes.php';
+require "conexao-bd.php"; 
+require_once "Produto.php"; 
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    $id = $_POST['id'];
+    $produtoNome = $_POST['produto'];
+    $preco = $_POST['preco'];
+    $descricao = $_POST['descricao'];
+    $tamanho = $_POST['tamanho'];
 
-// $id= $_POST['id'];
+    $produto = new Produto($produtoNome, $preco, $descricao, $tamanho);
+    $produto->id = $id;
 
-// $produtoAtual = [
-//     'produto' => $_POST['produto'],
-//     'preco' => $_POST['preco'],
-//     'descricao' => $_POST['descricao'],
-//     'tamanho' => $_POST['tamanho'],
-// ];
+     if (editarProduto($pdo, $produto)) {
+        `<p> "Produto atualizado com sucesso!"</p>`;
+    } else {
+        `<p> Erro</p>`;
+    }
+}
 
-// $novoProduto = new Produto(
-//     $produtoAtual['produto'],
-//     $produtoAtual['preco'],
-//     $produtoAtual['descricao'],
-//     $produtoAtual['tamanho'],
-// );
-
-
-// $novoProduto->id = $id;
-
-// if (editarProduto($pdo, $novoProduto)) {
-//     echo "<p>Tudo OK</p>";
-// } else {
-//     echo "<p>Nada OK</p>";
-// } -->
+header('Location: index.php');
