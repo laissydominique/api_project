@@ -12,7 +12,7 @@ function todosOsProdutos(\PDO $pdo): array
     $produtos = [];
 
     foreach ($produtosDados as $produto) {
-        $produtoObjeto = new Produto($produto['produto'], $produto['preco'], $produto['descricao'], $produto['tamanho']);
+        $produtoObjeto = new Produto($produto['produto'], $produto['preco'], $produto['descricao'], $produto['tamanho'], $produto['imagem'] );
         $produtoObjeto->id = $produto['id_produto'];
         $produtos[] = $produtoObjeto;
     }
@@ -22,9 +22,9 @@ function todosOsProdutos(\PDO $pdo): array
 
 function adicionarNovoProduto(PDO $pdo, Produto $produto)
 {
-    $sql = "INSERT INTO produtos ( produto, preco, descricao, tamanho) VALUES (? , ? , ?, ?)";
+    $sql = "INSERT INTO produtos ( produto, preco, descricao, tamanho, imagem) VALUES (? , ? , ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$produto->produto,  $produto->preco, $produto->descricao, $produto->tamanho]);
+    $stmt->execute([$produto->produto,  $produto->preco, $produto->descricao, $produto->tamanho, $produto->getImagem()]);
 }
 
 function excluirProduto(\PDO $pdo, $idProduto): void
@@ -34,9 +34,9 @@ function excluirProduto(\PDO $pdo, $idProduto): void
     $stmt->execute([$idProduto]);
 }
 
-function editarProduto(PDO $pdo, Produto $produto) {
-    $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?  WHERE id_produto = ?";
-    $stmt = $pdo->prepare($sql);
-    return
-    $stmt->execute([$produto->getProduto(), $produto->getPreco(), $produto->getDescricao(),  $produto->getTamanho(), $produto->id]);
-}
+// function editarProduto(PDO $pdo, Produto $produto) {
+//     $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?  WHERE id_produto = ?";
+//     $stmt = $pdo->prepare($sql);
+//     return
+//     $stmt->execute([$produto->getProduto(), $produto->getPreco(), $produto->getDescricao(),  $produto->getTamanho(), $produto->id]);
+// }

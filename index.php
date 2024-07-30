@@ -48,6 +48,12 @@ $produtos = todosOsProdutos($pdo);
                     <input type="text" name="tamanho" id="tamanho" placeholder="Informe o tamanho" required>
                 </div>
 
+                <div class="imagem">
+                    <label for="imagem">Anexe a imagem</label>
+                    <input type="file" name="imagem" accept="image/*" id="imagem" placeholder="Anexe uma imagem">
+                    </div>
+
+
                 <div class="btn">
                     <button type="submit">Salvar</button>
                 </div>
@@ -62,6 +68,7 @@ $produtos = todosOsProdutos($pdo);
                         <th class="tarefa">Valor de venda</th>
                         <th class="descricao">Descrição</th>
                         <th class="tamanho">Tamanho</th>
+                        <th class="imagem">Imagem</th>
                         <th class="editar">Editar</th>
                         <th class="eliminar">Eliminar</th>
 
@@ -82,6 +89,10 @@ $produtos = todosOsProdutos($pdo);
                             <td>
                                 <p class="tamanho"> <?= $produto->tamanho ?> </p>
                             </td>
+                            <td>
+                            <img src="img/uploads/<?= htmlspecialchars($produto->imagem, ENT_QUOTES, 'UTF-8') ?>" alt="Imagem" width="40px">
+                            </td>
+
                             <td><a href="editar-produto.php?">Editar</a></td>
 
                             <td><a href="excluir-produto.php?id=<?= $produto->id ?>">Excluir</a></td>

@@ -19,14 +19,13 @@ $produtos = todosOsProdutos($pdo);
 </head>
 
 <body>
+    <div class="container">
     <div class="saudacao">
     <h1> Glam<span>X</span></h1>
     <br>
     <p class="frase" >Transforme seu estilo com <span >elegância e inovação</span>. descubra a <span> beleza</span> em cada detalhe!</p>
 
     </div>
-
-    <div class="container">
         <div class="produtos">
             <?php foreach ($produtos as $produto) : ?>
                 <div class="item"> 
@@ -34,16 +33,16 @@ $produtos = todosOsProdutos($pdo);
                 <p> <?= $produto->produto ?> </p>
                 </div>
                 <div class="imagem">
-                    <img src="img/image.png" alt="" width="100px">
+                <img src="img/uploads/<?= htmlspecialchars($produto->imagem, ENT_QUOTES, 'UTF-8') ?>" alt="Imagem" width="300px" height="250px">
                 </div>
                 <div class="preco"> 
-                <p> <?= $produto->preco ?> </p>
+                <p> <span>R$</span><?= "\n". $produto->preco ?></p>
                 </div>
                 <div class="descricao"> 
                 <p> <?= $produto->descricao ?> </p>
                 </div>
                 <div class="tamanho"> 
-                <p> <span class="spantamanho"></span> <?= $produto->tamanho ?> </p>
+                <p> <?= "\n". $produto->tamanho ?> </p>
                 </div>
                 </div>
             <?php endforeach; ?>

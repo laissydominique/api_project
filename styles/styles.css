@@ -3,13 +3,11 @@
     margin: 0;
     border: none;
     font-family: sans-serif;
-
 }
 
 
 body{
-    background-color:#b26ced ;
-    
+    background-color:#000000 ;
 }
 
  .container{
@@ -27,7 +25,6 @@ body{
 
 h1{
     font-size: 37px;
-
 }
 
 h2{
@@ -35,7 +32,7 @@ h2{
 } 
 
 form{
-    background-color: rgba(255, 255, 255, 0.167);
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid, rgba(0, 0, 0, 0.485);
     border-radius: 10px;
     width: 600px;
@@ -52,11 +49,15 @@ form{
     justify-content: center;
 }
 
- input[type="text"] {
+ input[type="text"], input[type="file"] {
+    margin-top: 10px;
     width: 100%;
     max-width: 630px; 
     padding: 10px;
     border-radius: 7px;
+    background-color: #00000000;
+    border: 2px solid #7535c9;
+    color: white;
 }
 
 label{
@@ -75,7 +76,7 @@ table{
     margin-top: 100px;
 }
 
-.tamanho, .preco, .descricao, .produto{
+.tamanho, .preco, .descricao, .produto, .imagem{
     margin-top: 20px;
     padding: 20px;
 } 
@@ -86,10 +87,11 @@ table{
     justify-content: center;
     margin-top: 20px;
 }
+
 button{
-background-color: #7535c9;
+background-color: #00000000;
 border-radius: 15px;
-border: 1px solid black;
+border: 1px solid 7535c9;
 color: white;
 width: 100px;
 height: 30px;
@@ -107,37 +109,36 @@ margin-bottom: 10px;
 .tabela-de-produtos table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #9757db;
+    background-color: #00000000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabela-de-produtos th, .tabela-de-produtos td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
-
+    border: 1px solid #7535c9;
 }
 
 .tabela-de-produtos th {
-    background-color: #f0f0f0;
+    background-color: #dbadfe;
     color: #333;
     font-weight: bold;
+    border: 1px solid #7535c9;
+
 }
 
 .tabela-de-produtos td {
     color: #ffff;
     justify-content: left;
     font-weight: bold;
-
 }
 
 .tabela-de-produtos td a {
 
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 .tabela-de-produtos td a:hover {
     text-decoration: underline;
 }
-

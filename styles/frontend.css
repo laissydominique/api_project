@@ -1,19 +1,28 @@
-/* Estilo global para o corpo da página */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #a279ee;
+*{
     margin: 0;
     padding: 0;
     color: white;
 }
 
-/* Estilo para elementos span */
+body,html, .container{
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #180934;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
 span {
-    color: #5a0095;
+    color: #cc7fff;
 }
 
 .saudacao {
-    margin-top: 50px;
+    margin-top: 70px;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -22,31 +31,26 @@ span {
 }
 
 h1{
-    font-size: 40px;
+    font-size: 47px;
+    margin-bottom: 2rem;
 }
 
 .frase {
     font-size: 25px;
     margin: 0;
-
 }
 
 .container {
     display: flex;
-    flex-direction: row;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; 
 }
 
 .produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; 
+    gap: 2px; 
     margin: 100px 0 20px 0; 
     justify-content: center;
 }
@@ -64,12 +68,14 @@ h1{
 }
 
 .item {
+    display: flex;
+    flex-direction: column;
     width: 200px;
     border: 1px solid transparent; 
     margin: 20px;
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.231); 
     border-radius: 15px;
-    padding: 20px; 
+    padding: 26px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     cursor: pointer; 
