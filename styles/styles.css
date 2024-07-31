@@ -36,8 +36,9 @@ form{
     border: 1px solid, rgba(0, 0, 0, 0.485);
     border-radius: 10px;
     width: 600px;
-    display: grid;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
 
 }
@@ -49,7 +50,7 @@ form{
     justify-content: center;
 }
 
- input[type="text"], input[type="file"] {
+ input[type="text"], input[type="file"], input[type="number"] {
     margin-top: 10px;
     width: 100%;
     max-width: 630px; 
@@ -58,6 +59,16 @@ form{
     background-color: #00000000;
     border: 2px solid #7535c9;
     color: white;
+    outline: none;
+}
+
+input[type="text"]:hover, input[type="file"]:hover, input[type="number"]:hover{
+    border: 2px solid #8e59d3;
+
+}
+
+input[type="file"]{
+    cursor: pointer;
 }
 
 label{
@@ -82,21 +93,21 @@ table{
 } 
 
 .btn{
+    margin-top: 10px;
+    width: 99%;
+    padding: 10px;
+    border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
 }
 
 button{
 background-color: #00000000;
-border-radius: 15px;
-border: 1px solid 7535c9;
-color: white;
-width: 100px;
-height: 30px;
+color: #ffffff;
+font-weight: bold;
+font-size: 20px;
 cursor: pointer;
-margin-bottom: 10px;
 }
 
 .tabela-de-produtos {
@@ -121,7 +132,7 @@ margin-bottom: 10px;
 
 .tabela-de-produtos th {
     background-color: #dbadfe;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     border: 1px solid #7535c9;
 

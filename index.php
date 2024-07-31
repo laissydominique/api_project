@@ -35,7 +35,7 @@ $produtos = todosOsProdutos($pdo);
 
                 <div class="preco">
                     <label for="preco">Valor de venda</label>
-                    <input type="text" name="preco" id="preco" placeholder="Digite o valor de venda:" required>
+                    <input type="number" min="0" max="10000" step="1" name="preco" id="preco" placeholder="Digite o valor de venda:" required="required">
                 </div>
 
                 <div class="descricao">
@@ -53,9 +53,8 @@ $produtos = todosOsProdutos($pdo);
                     <input type="file" name="imagem" accept="image/*" id="imagem" placeholder="Anexe uma imagem">
                     </div>
 
-
                 <div class="btn">
-                    <button type="submit">Salvar</button>
+                    <button type="submit">SALVAR</button>
                 </div>
             </form>
         </div>

@@ -12,15 +12,12 @@ if (!$novoProduto['produto']) {
     exit;
 }
 
-
-
 $produto = new Produto(
     $novoProduto['produto'],
-    $novoProduto['preco'],
+     $novoProduto['preco'],
     $novoProduto['descricao'],
     $novoProduto['tamanho'],
     $novoProduto['imagem'],
-
 );
 
 if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
