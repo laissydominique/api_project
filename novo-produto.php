@@ -14,7 +14,7 @@ if (!$novoProduto['produto']) {
 
 $produto = new Produto(
     $novoProduto['produto'],
-     $novoProduto['preco'],
+    $novoProduto['preco'],
     $novoProduto['descricao'],
     $novoProduto['tamanho'],
     $novoProduto['imagem'],
@@ -22,9 +22,9 @@ $produto = new Produto(
 
 if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
     $novoNomeImagem = uniqid() . '_' . $_FILES['imagem']['name'];
-    
+
     $caminhoDestino = 'img/uploads/' . $novoNomeImagem;
-    
+
     if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoDestino)) {
         $produto->setImagem($novoNomeImagem);
     } else {

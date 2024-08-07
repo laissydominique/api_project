@@ -18,6 +18,10 @@ class Produto
         $this->imagem = $imagem;
     }
 
+    public function getId(){
+        return $this->id;
+    }
+
     public function getProduto()
     {
         return $this->produto;

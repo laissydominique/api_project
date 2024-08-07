@@ -34,9 +34,9 @@ function excluirProduto(\PDO $pdo, $idProduto): void
     $stmt->execute([$idProduto]);
 }
 
-// function editarProduto(PDO $pdo, Produto $produto) {
-//     $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?  WHERE id_produto = ?";
-//     $stmt = $pdo->prepare($sql);
-//     return
-//     $stmt->execute([$produto->getProduto(), $produto->getPreco(), $produto->getDescricao(),  $produto->getTamanho(), $produto->id]);
-// }
+function editarProduto(PDO $pdo, Produto $produto) {
+    $sql = "UPDATE produtos SET produto = ?, preco = ?, descricao = ?, tamanho = ?, imagem = ?  WHERE id_produto = ?";
+    $stmt = $pdo->prepare($sql);
+    return
+    $stmt->execute([$produto->getProduto(), $produto->getPreco(), $produto->getDescricao(), $produto->getTamanho(), $produto->getImagem() ,$produto->getId()]);
+}
